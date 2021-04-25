@@ -1613,6 +1613,7 @@ class Logger(Filterer):
         record = self.makeRecord(self.name, level, fn, lno, msg, args,
                                  exc_info, func, extra, sinfo)
         self.handle(record)
+        return record
 
     def handle(self, record):
         """
